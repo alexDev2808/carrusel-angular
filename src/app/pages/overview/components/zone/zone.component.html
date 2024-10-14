@@ -1,0 +1,16 @@
+<mat-form-field appearance="outline">
+<mat-label>Drop a file, it will not be uploaded!</mat-label>
+<ngx-mat-dropzone>
+    <input type="file" fileInput multiple [formControl]="filesCtrl" />
+
+    @for (file of files; track file.name) {
+    <mat-chip-row (removed)="remove(file)">
+    {{ file.name }}
+    <button matChipRemove>
+        <mat-icon>cancel</mat-icon>
+    </button>
+    </mat-chip-row>
+    }
+</ngx-mat-dropzone>
+<mat-icon matSuffix>cloud_upload</mat-icon>
+</mat-form-field>
