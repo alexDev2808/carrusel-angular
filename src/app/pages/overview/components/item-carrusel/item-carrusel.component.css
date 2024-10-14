@@ -1,0 +1,14 @@
+.bg-container {
+    background-color: #DDDDDD;
+}
+.file-item:hover {
+    transform: translateY(-6px);
+    transition: all ease 0.2s;
+}
+.file-list__item {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
